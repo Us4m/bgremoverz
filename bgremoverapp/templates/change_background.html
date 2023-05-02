@@ -1,0 +1,10 @@
+<h1>Change Background</h1>
+
+{% if new_background_path %}
+<p>Here's your image with the new background:</p>
+<img src="{{ new_background_path.url }}" alt="New Background Image">
+{% else %}
+<p>No image found.</p>
+{% endif %}
+
+<a href="{% url 'remove_background' %}">Remove background from a new image</a>
